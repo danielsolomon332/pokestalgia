@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import Nav from '../Nav/Nav'
-import Card from '../Card/Card'
-import Favorites from '../Favorites/Favorites'
-import GenX from '../GenX/GenX'
-import { fetchDataGet } from '../APICalls'
+
 import './App.css'
 
 export class App extends Component {
@@ -24,6 +20,8 @@ export class App extends Component {
   render() {
     return (
       <div>
+        <h1>Welcome to Pokestalgia!</h1>
+        <p>The App for old fans to discover new pokemon and where newer fans can rediscover older pokemon!</p>
       </div>
     )
   }
