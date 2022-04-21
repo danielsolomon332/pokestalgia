@@ -36,9 +36,16 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen1Pokemon: data.pokemon_species})
-              console.log(this.state.gen1Pokemon)
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
         })
+        this.setState({gen1Pokemon: formattedPokemon})
+        })
+
     getPokemonByGeneration('2')
       .then((res) => {
         if (!res.ok) {
@@ -51,9 +58,15 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen2Pokemon: data.pokemon_species})
-              console.log(this.state.gen2Pokemon)
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen2Pokemon: formattedPokemon})
+        })
     getPokemonByGeneration('3')
       .then((res) => {
         if (!res.ok) {
@@ -66,9 +79,15 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen3Pokemon: data.pokemon_species})
-              console.log(this.state.gen3Pokemon)
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen3Pokemon: formattedPokemon})
+        })
     getPokemonByGeneration('4')
       .then((res) => {
         if (!res.ok) {
@@ -81,8 +100,15 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen4Pokemon: data.pokemon_species})
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen4Pokemon: formattedPokemon})
+        })
     getPokemonByGeneration('5')
       .then((res) => {
         if (!res.ok) {
@@ -109,8 +135,15 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen6Pokemon: data.pokemon_species})
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen6Pokemon: formattedPokemon})
+        })
     getPokemonByGeneration('7')
       .then((res) => {
         if (!res.ok) {
@@ -123,8 +156,15 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen7Pokemon: data.pokemon_species})
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen7Pokemon: formattedPokemon})
+        })
     getPokemonByGeneration('8')
       .then((res) => {
         if (!res.ok) {
@@ -137,10 +177,16 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen8Pokemon: data.pokemon_species})
-      })
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen8Pokemon: formattedPokemon})
+        })
   }
-
 
   // findPokemon = (input) => {
   //
