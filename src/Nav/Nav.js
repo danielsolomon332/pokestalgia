@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Nav.css'
+import { NavLink } from 'react-router-dom'
 
 export class Nav extends Component {
   constructor() {
@@ -21,7 +22,7 @@ export class Nav extends Component {
           <h1 className='title'>Pokestalgia</h1>
         <div className='bottom-nav'>
           <button className='gen-1-button' id='gen1Button'>Gen 1</button>
-          <button className='gen-2-button' id='gen2Button'>Gen 2</button>
+          <NavLink to="/Gen2"><button className='gen-2-button' id='gen2Button'>Gen 2</button></NavLink>
           <button className='gen-3-button' id='gen3Button'>Gen 3</button>
           <button className='gen-4-button' id='gen4Button'>Gen 4</button>
           <button className='gen-5-button' id='gen5Button'>Gen 5</button>
