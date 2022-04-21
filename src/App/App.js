@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom';
 // import Main from '../Main/Main'
 import Nav from '../Nav/Nav'
+import Gen1 from '../Gen1/Gen1'
+import Gen2 from '../Gen2/Gen2'
 import './App.css'
 import { getPokemonByGeneration, getSinglePokemon } from '../APIcalls'
 
@@ -9,14 +12,14 @@ export class App extends Component {
     super()
     this.state = {
       singlePokemon: null,
-      gen1Pokemon: null,
-      gen2Pokemon: null,
-      gen3Pokemon: null,
-      gen4Pokemon: null,
-      gen5Pokemon: null,
-      gen6Pokemon: null,
-      gen7Pokemon: null,
-      gen8Pokemon: null,
+      gen1Pokemon: [],
+      gen2Pokemon: [],
+      gen3Pokemon: [],
+      gen4Pokemon: [],
+      gen5Pokemon: [],
+      gen6Pokemon: [],
+      gen7Pokemon: [],
+      gen8Pokemon: [],
       favoritedPokemon: null,
       isError: false,
       errorMsg: ''
@@ -196,13 +199,21 @@ export class App extends Component {
     return (
       <div>
         <Nav />
-        <main>
-          <h1>Welcome to Pokestalgia!</h1>
-          <p>The App for old fans to discover new pokemon and where newer fans can rediscover older pokemon!</p>
-        </main>
+        <Route exact path='/' render={() => {
+          return (
+            <Gen1 gen1Pokemon={this.state.gen1Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen2' render={() => {
+          return (
+            <Gen2 gen2Pokemon={this.state.gen2Pokemon} />
+          )
+        }} />
       </div>
     )
   }
 }
+
+
 
 export default App;
