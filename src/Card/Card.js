@@ -1,14 +1,22 @@
 import React from 'react'
 import './Card.css'
+import CardInfo from './CardInfo/CardInfo'
 
-const Card = () => {
-  <div className="card">
-    <p>Name: {}</p>
-    <p>Pokedex #: {}</p>
-    <p>Bulbapedia Link:</p>
-    <a href=`https:bulbapedia.bulbagarden.net/wiki/${}_(Pok%C3%A9mon)`>
-    <div className='favorite-button'>
-      <button className='favorite-button' onClick={() => saveFavoritePokemon()}>Favorite</button>
+const Card = ({ gen1Pokemon }) => {
+  console.log(gen1Pokemon)
+  let gen1 = gen1Pokemon.map(pokemon => {
+    return (
+      <CardInfo
+      name={pokemon.name}
+      id={pokemon.id}
+      />
+    )
+  })
+  return (
+    <div>
+      {gen1}
     </div>
-  </div>
+  )
 }
+
+export default Card
