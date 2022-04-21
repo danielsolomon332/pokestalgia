@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom';
 // import Main from '../Main/Main'
 import Nav from '../Nav/Nav'
+import Gen1 from '../Gen1/Gen1'
 import './App.css'
 import { getPokemonByGeneration, getSinglePokemon } from '../APIcalls'
 
@@ -199,6 +201,9 @@ export class App extends Component {
         <main>
           <h1>Welcome to Pokestalgia!</h1>
           <p>The App for old fans to discover new pokemon and where newer fans can rediscover older pokemon!</p>
+        {this.state.gen1Pokemon && <Gen1
+        gen1Pokemon={this.state.gen1Pokemon}
+        />}
         </main>
       </div>
     )
