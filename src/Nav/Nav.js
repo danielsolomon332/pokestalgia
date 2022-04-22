@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Nav.css'
 import { NavLink } from 'react-router-dom'
+import pokeball from '../pokeball.png'
 
 export class Nav extends Component {
   constructor() {
@@ -10,16 +11,14 @@ export class Nav extends Component {
     }
   }
 
-  // handleTextInput = (event) => {
-  //     this.setState({ searchValue: event.target.value }, () =>
-  //       this.props.findPokemon(this.state.searchValue)
-  //     )
-  //   }
-
   render() {
     return (
-      <nav>
-        <h1 className='title'>Pokestalgia</h1>
+      <nav className='whole-nav'>
+        <div className='top-nav'>
+          <NavLink to="/"><h1 className='title'>Pokestalgia</h1></NavLink>
+          <img className='pokeball' src={pokeball} alt="pokeball" />
+          <NavLink to="/Favorites"><button className='favorites-button' id='favoritesButton'>Favorite Pokemon</button></NavLink>
+        </div>
         <div className='bottom-nav'>
           <NavLink to="/Gen1"><button className='gen-1-button' id='gen1Button'>Gen 1</button></NavLink>
           <NavLink to="/Gen2"><button className='gen-2-button' id='gen2Button'>Gen 2</button></NavLink>
