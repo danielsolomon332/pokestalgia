@@ -210,7 +210,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='whole-page'>
         <Nav />
 
         <Route exact path='/Gen1' render={() => {
