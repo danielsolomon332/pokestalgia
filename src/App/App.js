@@ -4,6 +4,12 @@ import { Route, Switch } from 'react-router-dom';
 import Nav from '../Nav/Nav'
 import Gen1 from '../Gen1/Gen1'
 import Gen2 from '../Gen2/Gen2'
+import Gen3 from '../Gen3/Gen3'
+import Gen4 from '../Gen4/Gen4'
+import Gen5 from '../Gen5/Gen5'
+import Gen6 from '../Gen6/Gen6'
+import Gen7 from '../Gen7/Gen7'
+import Gen8 from '../Gen8/Gen8'
 import './App.css'
 import { getPokemonByGeneration, getSinglePokemon } from '../APIcalls'
 
@@ -124,7 +130,14 @@ export class App extends Component {
         }
       })
       .then((data) => {
-        this.setState({gen5Pokemon: data.pokemon_species})
+        let formattedPokemon = data.pokemon_species.map(pokemon => {
+          let id = pokemon.url.slice(42, -1)
+          let pokemonId = {
+            ...pokemon, id: id
+          }
+          return pokemonId
+        })
+        this.setState({gen5Pokemon: formattedPokemon})
       })
     getPokemonByGeneration('6')
       .then((res) => {
@@ -199,7 +212,8 @@ export class App extends Component {
     return (
       <div>
         <Nav />
-        <Route exact path='/' render={() => {
+
+        <Route exact path='/Gen1' render={() => {
           return (
             <Gen1 gen1Pokemon={this.state.gen1Pokemon} />
           )
@@ -207,6 +221,36 @@ export class App extends Component {
         <Route exact path='/Gen2' render={() => {
           return (
             <Gen2 gen2Pokemon={this.state.gen2Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen3' render={() => {
+          return (
+            <Gen3 gen3Pokemon={this.state.gen3Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen4' render={() => {
+          return (
+            <Gen4 gen4Pokemon={this.state.gen4Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen5' render={() => {
+          return (
+            <Gen5 gen5Pokemon={this.state.gen5Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen6' render={() => {
+          return (
+            <Gen6 gen6Pokemon={this.state.gen6Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen7' render={() => {
+          return (
+            <Gen7 gen7Pokemon={this.state.gen7Pokemon} />
+          )
+        }} />
+        <Route exact path='/Gen8' render={() => {
+          return (
+            <Gen8 gen8Pokemon={this.state.gen8Pokemon} />
           )
         }} />
       </div>
