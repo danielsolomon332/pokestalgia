@@ -13,7 +13,7 @@ const Gen8 = ({ gen8Pokemon }) => {
     )
   })
   return (
-    <div className='ideas-container'>
+    <div className='cards-container'>
       {gen8}
     </div>
   )
