@@ -1,6 +1,5 @@
 import React from 'react'
 import './Gen6Info.css'
-import { NavLink } from 'react-router-dom'
 
 const Gen6Info = ({ name, id }) => {
   return (
