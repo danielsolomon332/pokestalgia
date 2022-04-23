@@ -240,7 +240,7 @@ export class App extends Component {
       <div>
         <Nav />
         <div className='loading-error-message'>
-            {this.state.error ? <h2>Something went wrong! Send complaints to Scott and Robbie</h2> :
+            {this.state.isError ? <h2>Something went wrong! Send complaints to Scott and Robbie</h2> :
 
         <Route exact path='/' render={() => {
           return <Main />
