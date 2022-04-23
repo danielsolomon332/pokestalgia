@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom';
-// import Main from '../Main/Main'
+import { Route } from 'react-router-dom';
+import Main from '../Main/Main'
 import Nav from '../Nav/Nav'
 import Gen1 from '../Gen1/Gen1'
 import Gen2 from '../Gen2/Gen2'
@@ -11,13 +11,12 @@ import Gen6 from '../Gen6/Gen6'
 import Gen7 from '../Gen7/Gen7'
 import Gen8 from '../Gen8/Gen8'
 import './App.css'
-import { getPokemonByGeneration, getSinglePokemon } from '../APIcalls'
+import { getPokemonByGeneration } from '../APIcalls'
 
 export class App extends Component {
   constructor() {
     super()
     this.state = {
-      singlePokemon: null,
       gen1Pokemon: [],
       gen2Pokemon: [],
       gen3Pokemon: [],
@@ -26,7 +25,7 @@ export class App extends Component {
       gen6Pokemon: [],
       gen7Pokemon: [],
       gen8Pokemon: [],
-      favoritedPokemon: null,
+      favoritedPokemon: [],
       isError: false,
       errorMsg: ''
     }
@@ -204,15 +203,14 @@ export class App extends Component {
         })
   }
 
-  // findPokemon = (input) => {
-  //
-  // }
 
   render() {
     return (
       <div className='whole-page'>
         <Nav />
-
+        <Route exact path='/' render={() => {
+          return <Main />
+        }} />
         <Route exact path='/Gen1' render={() => {
           return (
             <Gen1 gen1Pokemon={this.state.gen1Pokemon} />
