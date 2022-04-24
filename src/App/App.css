@@ -43,6 +43,13 @@ main {
   align-items: center;
 }
 
-.whole-page {
+html {
   background-color: #0075BE;
+  height: 100%;
+  background: cover;
+}
+
+.loading-error-message {
+  display: flex;
+  justify-content: center;
 }

@@ -6,12 +6,12 @@ const getPokemonByGeneration = (generationNumber) => {
   )
 }
 
-const getSinglePokemon = (nameOrId) => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}`).catch(
+const getAllPokemon = () => {
+  return fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1126').catch(
     (error) => {
       throw new Error(error)
     }
   )
 }
 
-export { getPokemonByGeneration, getSinglePokemon }
+export { getPokemonByGeneration, getAllPokemon }

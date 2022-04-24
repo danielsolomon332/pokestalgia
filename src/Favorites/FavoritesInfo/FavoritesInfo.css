@@ -22,7 +22,7 @@ p,
  font-weight: bold;
 }
 
-.add-favorite {
+.remove-favorite {
   margin-bottom: 0.4rem;
   background-color: #CE2211;
   box-shadow: 0 0 20px #eee;
@@ -32,7 +32,7 @@ p,
   font-size: 15px;
 }
 
-.add-favorite:hover {
+.remove-favorite:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
