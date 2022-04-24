@@ -1,5 +1,6 @@
 import React from 'react'
 import './FavoritesInfo.css'
+import PropTypes from 'prop-types'
 
 const FavoritesInfo = ({ removeFavorite, name, id }) => {
   return (
@@ -15,3 +16,9 @@ const FavoritesInfo = ({ removeFavorite, name, id }) => {
 }
 
 export default FavoritesInfo
+
+FavoritesInfo.propTypes = {
+  removeFavorite: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+}

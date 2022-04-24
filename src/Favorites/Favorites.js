@@ -1,6 +1,7 @@
 import React from 'react'
 import './Favorites.css'
 import FavoritesInfo from './FavoritesInfo/FavoritesInfo'
+import PropTypes from 'prop-types'
 
 const Favorites = ({ removeFavorite, favoritedPokemon }) => {
   let favorites = favoritedPokemon.map((pokemon) => {
@@ -26,3 +27,14 @@ const Favorites = ({ removeFavorite, favoritedPokemon }) => {
 }
 
 export default Favorites
+
+Favorites.propTypes = {
+  removeFavorite: PropTypes.func.isRequired,
+  favoritedPokemon: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired    
+    })
+  )
+}
