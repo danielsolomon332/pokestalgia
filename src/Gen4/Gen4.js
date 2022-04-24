@@ -1,6 +1,7 @@
 import React from 'react'
 import './Gen4.css'
 import Gen4Info from './Gen4Info/Gen4Info'
+import PropTypes from 'prop-types'
 
 const Gen4 = ({ addFavorite, gen4Pokemon }) => {
   let gen4 = gen4Pokemon.map((pokemon) => {
@@ -21,3 +22,14 @@ const Gen4 = ({ addFavorite, gen4Pokemon }) => {
 }
 
 export default Gen4
+
+Gen4.propTypes = {
+  addFavorite: PropTypes.func.isRequired,
+  gen4Pokemon: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired
+    })
+  )
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Gen4Info.css'
+import PropTypes from 'prop-types'
 
 const Gen4Info = ({ addFavorite, name, id }) => {
   return (
@@ -15,3 +16,9 @@ const Gen4Info = ({ addFavorite, name, id }) => {
 }
 
 export default Gen4Info
+
+Gen4Info.propTypes = {
+  addFavorite: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+}
