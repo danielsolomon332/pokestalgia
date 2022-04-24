@@ -78,7 +78,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -99,7 +99,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -120,7 +120,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -141,7 +141,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -162,7 +162,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -183,7 +183,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -204,7 +204,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
@@ -225,7 +225,7 @@ export class App extends Component {
         let formattedPokemon = data.pokemon_species.map(pokemon => {
           let id = pokemon.url.slice(42, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         }).sort((pokemon1, pokemon2) => pokemon1.id - pokemon2.id)
