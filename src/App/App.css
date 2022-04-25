@@ -46,6 +46,7 @@ main {
 html {
   background-color: #0075BE;
   height: 100%;
+  width: 100%;
   background: cover;
 }
 
