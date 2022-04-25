@@ -57,7 +57,7 @@ export class App extends Component {
         let formattedPokemon = data.results.map(pokemon => {
           let id = pokemon.url.slice(34, -1)
           let pokemonId = {
-            ...pokemon, id: id
+            ...pokemon, id: parseInt(id)
           }
           return pokemonId
         })
