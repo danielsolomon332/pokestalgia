@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Main from '../Main/Main'
 import Nav from '../Nav/Nav'
 import Favorites from '../Favorites/Favorites'
+import WrongURL from '../WrongURL/WrongURL'
 import Gen1 from '../Gen1/Gen1'
 import Gen2 from '../Gen2/Gen2'
 import Gen3 from '../Gen3/Gen3'
@@ -239,56 +240,57 @@ export class App extends Component {
     return (
       <div>
         <Nav />
-        <div className='loading-error-message'>
-            {this.state.isError ? <h2>Something went wrong! Send complaints to Scott and Robbie</h2> :
-
-        <Route exact path='/' render={() => {
-          return <Main />
-        }} /> }
-        </div>
-        <Route exact path='/Favorites' render={() => {
-          return <Favorites favoritedPokemon={this.state.favoritedPokemon} removeFavorite={this.removeFavorite} />
-        }} />
-        <Route exact path='/Gen1' render={() => {
-          return (
-            <Gen1 gen1Pokemon={this.state.gen1Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen2' render={() => {
-          return (
-            <Gen2 gen2Pokemon={this.state.gen2Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen3' render={() => {
-          return (
-            <Gen3 gen3Pokemon={this.state.gen3Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen4' render={() => {
-          return (
-            <Gen4 gen4Pokemon={this.state.gen4Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen5' render={() => {
-          return (
-            <Gen5 gen5Pokemon={this.state.gen5Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen6' render={() => {
-          return (
-            <Gen6 gen6Pokemon={this.state.gen6Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen7' render={() => {
-          return (
-            <Gen7 gen7Pokemon={this.state.gen7Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
-        <Route exact path='/Gen8' render={() => {
-          return (
-            <Gen8 gen8Pokemon={this.state.gen8Pokemon} addFavorite={this.addFavorite} />
-          )
-        }} />
+        <Switch>
+          <Route exact path='/' render={() => {
+            return <Main />
+          }} />
+          <Route exact path='/Favorites' render={() => {
+            return <Favorites favoritedPokemon={this.state.favoritedPokemon} removeFavorite={this.removeFavorite} />
+          }} />
+          <Route exact path='/Gen1' render={() => {
+            return (
+              <Gen1 gen1Pokemon={this.state.gen1Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen2' render={() => {
+            return (
+              <Gen2 gen2Pokemon={this.state.gen2Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen3' render={() => {
+            return (
+              <Gen3 gen3Pokemon={this.state.gen3Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen4' render={() => {
+            return (
+              <Gen4 gen4Pokemon={this.state.gen4Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen5' render={() => {
+            return (
+              <Gen5 gen5Pokemon={this.state.gen5Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen6' render={() => {
+            return (
+              <Gen6 gen6Pokemon={this.state.gen6Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen7' render={() => {
+            return (
+              <Gen7 gen7Pokemon={this.state.gen7Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route exact path='/Gen8' render={() => {
+            return (
+              <Gen8 gen8Pokemon={this.state.gen8Pokemon} addFavorite={this.addFavorite} />
+            )
+          }} />
+          <Route path='/*' render={() => {
+            return <WrongURL />
+          }} />
+        </Switch>
       </div>
     )
   }
