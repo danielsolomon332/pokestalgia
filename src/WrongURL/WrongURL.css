@@ -1,0 +1,8 @@
+.wrong-url {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  font-family: Garamond, serif;
+  margin-top: 2rem;
+}
