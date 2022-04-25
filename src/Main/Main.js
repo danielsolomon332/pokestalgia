@@ -10,7 +10,7 @@ const Main = () => {
         <p>The App created for older fans to relive their Pokestalgia and learn about new Pocket Monsters too!</p>
         <p>This App is also a place for newer fans to rediscover the older Pokemon generations!</p>
       </div>
-      <div>
+      <div className='image-container'>
         <img className='pokemon-starters' src={pokemon_starters} alt="pokemon starters" />
       </div>
     </div>
