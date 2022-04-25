@@ -1,26 +1,26 @@
-## Pokestalgia
+# Pokestalgia
 
 If you are one the many million past or present Pokemon fans, Pokestalgia is the app for you! Whether you are an older fan, who is excited to learn about newer generations of Pokemon, or would love a trip down memory lane, have fun exploring Pokestalgia! This app is also a great place for newer fans to learn about the origins of Pokemon!
 
-# App Deployed Link with Heroku
+## App Deployed Link with Heroku
 
 [Pokestalgia Link](https://pokestalgia.herokuapp.com/)
 
-# Navigation Bar
+## Navigation Bar
 
 ![](https://user-images.githubusercontent.com/90291724/165008281-9970df18-862b-46c0-bbdf-b5f5cc82dbe5.png)
 
 
-# Main View
+## Main View
 
 ![](https://user-images.githubusercontent.com/90291724/165008194-4792d5c8-ea95-4e76-8432-5791c3dccb25.png)
 
 
-# Pokemon Generation Example (Generation 1)
+## Pokemon Generation Example (Generation 1)
 
 ![](https://user-images.githubusercontent.com/90291724/165008311-1a1a7a45-88d1-49ab-932b-b9182796f99b.png)
 
-# Favorited Pokemon View
+## Favorited Pokemon View
 
 ![](https://user-images.githubusercontent.com/90291724/165008349-55369182-ccf0-4bf7-80e0-cced66d31ba2.png)
 
@@ -40,11 +40,11 @@ If you are one the many million past or present Pokemon fans, Pokestalgia is the
 - Project Structure Organized with [GitHub Project Board](https://github.com/danielsolomon332/pokestalgia/projects/1)
 - If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Getting Started
+## Getting Started
 To get a local copy up and running follow these simple steps.
 
 ## Installation
